@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import "@/assets/styles/globals.css";
 
 type MainLayoutProps = {
   children: ReactNode;
