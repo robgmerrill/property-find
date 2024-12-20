@@ -95,7 +95,7 @@ const Navbar = () => {
             <div className="md:block md:ml-6">
               <div className="flex items-center">
                 <button
-                  onClick={(prev) => !prev}
+                  onClick={() => setIsLoggedIn((prev) => !prev)}
                   className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
                   <FaGoogle className="text-white mr-2"></FaGoogle>
@@ -185,6 +185,7 @@ const Navbar = () => {
                       Saved Properties
                     </Link>
                     <button
+                      onClick={() => setIsLoggedIn((prev) => !prev)}
                       className="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabIndex="-1"
@@ -232,7 +233,7 @@ const Navbar = () => {
             )}
             {!isLoggedIn && (
               <button
-                onClick={(prev) => !prev}
+                onClick={() => setIsLoggedIn((prev) => !prev)}
                 className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-5"
               >
                 <i className="fa-brands fa-google mr-2"></i>
