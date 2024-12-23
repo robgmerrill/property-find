@@ -22,10 +22,7 @@ const HomeProperties = async () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {recentProperties.map((property) => (
-                <PropertyCard
-                  key={property._id}
-                  property={property}
-                ></PropertyCard>
+                <PropertyCard property={property}></PropertyCard>
               ))}
             </div>
           )}
