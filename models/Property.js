@@ -19,10 +19,18 @@ const PropertySchema = new Schema(
       type: String,
     },
     location: {
-      street: String,
-      city: String,
-      state: String,
-      zipcode: String,
+      street: {
+        type: String,
+      },
+      city: {
+        type: String,
+      },
+      state: {
+        type: String,
+      },
+      zipcode: {
+        type: String,
+      },
     },
     beds: {
       type: Number,
@@ -42,16 +50,32 @@ const PropertySchema = new Schema(
       },
     ],
     rates: {
-      nightly: Number,
-      weekly: Number,
-      monthly: Number,
+      nightly: {
+        type: Number,
+      },
+      weekly: {
+        type: Number,
+      },
+      monthly: {
+        type: Number,
+      },
     },
     seller_info: {
-      name: String,
-      email: String,
-      phone: String,
+      name: {
+        type: String,
+      },
+      email: {
+        type: String,
+      },
+      phone: {
+        type: String,
+      },
     },
-    images: [{ type: String }],
+    images: [
+      {
+        type: String,
+      },
+    ],
     is_featured: {
       type: Boolean,
       default: false,
